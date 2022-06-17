@@ -11,3 +11,6 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.0
 URL: https://github.com/camposvieira/rsisagua
 BugReports: https://github.com/camposvieira/rsisagua/issues
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
