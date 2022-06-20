@@ -1,8 +1,6 @@
 
-C:/Users/gabriel.vieira/OneDrive - Ministério da Saúde/Documentos/Gabriel
-
 # Download  do conjunto de cobertura de abastecimento e filtros por periodo, região e uf
-download.cobertura <- function(periodo,regiao=NULL,uf=NULL){
+download_cobertura <- function(periodo,regiao=NULL,uf=NULL){
 
 
   # Função para download e carregamento em formato csv dos conjuntos de dados
@@ -15,7 +13,7 @@ download.cobertura <- function(periodo,regiao=NULL,uf=NULL){
   }
 
   # Download inicial - Cadastro
-  download.cobert_1 <- function(conjunto){
+  download_cobert_1 <- function(conjunto){
     cobertura <- NULL
     conjunto <- conjunto
     url_completa <- paste0("https://sage.saude.gov.br/dados/sisagua/", conjunto, ".zip")
@@ -41,7 +39,7 @@ download.cobertura <- function(periodo,regiao=NULL,uf=NULL){
     uf <-  list_uf
   }
 
-  cobertura <- download.cobert_1("cadastro_populacao_abastecida")
+  cobertura <- download_cobert_1("cadastro_populacao_abastecida")
   cobertura <- cobertura %>% filter(Ano.de.referência %in% periodo) %>%
     filter(Região.Geográfica %in% regiao) %>%
     filter(UF %in% uf) %>%
