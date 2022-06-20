@@ -43,40 +43,7 @@ download_cobertura <- function(periodo,regiao=NULL,uf=NULL){
   cobertura <- cobertura %>% filter(Ano.de.referência %in% periodo) %>%
     filter(Região.Geográfica %in% regiao) %>%
     filter(UF %in% uf) %>%
-    rename(regiao=Região.Geográfica,
-           uf=UF,
-           regional_saude=Regional.de.Saúde,
-           municipio=Município,
-           cod_ibge=Código.IBGE,
-           tipo_inst=Tipo.da.Instituição,
-           sigla_inst=Sigla.da.Instituição,
-           nome_inst=Nome.da.Instituição,
-           cnpj_inst=CNPJ.da.Instituição,
-           nome_escrit_reg_loc=Nome.do.escritório.regional.local,
-           cnpj_escrit_reg_loc=CNPJ.do.escritório.regional.local,
-           tipo_forma_abast=Tipo.da.Forma.de.Abastecimento,
-           cod_forma_abast=Código.Forma.de.abastecimento,
-           nome_forma_abast=Nome.da.Forma.de.Abastecimento,
-           ano_ref=Ano.de.referência,
-           data_registro=Data.de.registro,
-           data_preenchimento=Data.de.preenchimento,
-           carro_pipa=Carro.Pipa,
-           chafariz=Chafariz,
-           fonte=Fonte,cisterna=Cisterna,
-           canalizacao=Canalização,
-           caixa_dagua=Caixa.d.água,
-           sem_reservacao=Sem.reservação,
-           outro_suprimento=Outro.tipo.de.suprimento,
-           capt_superficial=Captação.superficial,
-           capt_subterranea=Captação.subterrânea,
-           capt_agua_chuva=Captação.de.Água.de.chuva,
-           filtracao=Filtração,
-           desinfeccao=Desinfecção,
-           econ_resid_perm=Número.de.economias.residenciais..domicílios.permanentes.,
-           econ_resid_ocasional=Número.de.economias.residenciais..de.uso.ocasional.,
-           raz_hab_dom=Razão.habitantes.domicílio,
-           pop_recebe_saa=Pop.recebe.Água.de.SAA,
-           pop_recebe_saa_sac=Pop.recebe.Água.de.SAA.SAC)
+    janitor::clean_names()
 
   return (cobertura)
 }
