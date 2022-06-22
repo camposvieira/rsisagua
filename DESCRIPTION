@@ -17,4 +17,5 @@ Config/testthat/edition: 3
 Imports: 
     janitor,
     dplyr,
-    magrittr
+    magrittr,
+    data.table

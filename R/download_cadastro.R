@@ -1,5 +1,5 @@
 
-#Download  do conjunto de cobertura de abastecimento e filtros por periodo, região e uf
+#Function download_cadastro
 
 download_cadastro <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 
@@ -19,24 +19,18 @@ download_cadastro <- function(periodo,regiao=NULL,unidade_federativa=NULL){
     unidade_federativa <-  list_uf
   }
 
-  #Download e unzip
+  #Download and unzip
   temp <- tempfile(fileext = ".zip")
   utils::download.file("https://sage.saude.gov.br/dados/sisagua/cadastro_populacao_abastecida.zip", temp)
   datazip <- utils::unzip(temp)
 
-  # # Try to download file
-  # tryCatch({
-  #   utils::download.file(file, temp, mode = "wb")
-  #   partial <- read.dbc::read.dbc(temp)
-  #   file.remove(temp)
-  # },
 
-  #Leitura e filtros
+  #Load data and filter
   cadastro <- data.table::fread(datazip, sep=";") %>%
     janitor::clean_names() %>%
-    filter(ano_de_referencia %in% periodo) %>%
-    filter(regiao_geografica %in% regiao) %>%
-    filter(uf %in% unidade_federativa)
+    dplyr::filter(ano_de_referencia %in% periodo) %>%
+    dplyr::filter(regiao_geografica %in% regiao) %>%
+    dplyr::filter(uf %in% unidade_federativa)
 
 
   return (cadastro)
