@@ -4,6 +4,7 @@
 download_cadastro <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 
   #trazer aqui avisos para periodo, regiao e unidade federativa
+  #if (missing(uf)){usethis::ui_stop("recado")} print
 
   list_uf <- c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG",
                "MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR",
