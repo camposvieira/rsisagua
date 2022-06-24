@@ -1,5 +1,24 @@
+#'Download dados de cadastro e populacao abastecida
+#'
+#'@param periodo Selecao do ou dos anos de referencia, a partir de 2014.
+#'@param regiao Selecao da ou das regioes geograficas.
+#'@param unidade_federativa Selecao da ou das unidades federativas.
+#'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
+#'@export
+#'@examples
+#'df <- download_cadastro(c(2014:2020), "NORTE", c("AM", "PA", "RO"))
+#'df2 <- download_cadastro(2020, unidade_federativa = "SC")
+#'df3 <- download_cadastro(2015, regiao = "NORTE")
+#'df4 <- download_cadastro(2022)
+#'\dontrun{
+#'df5 <- download_cadastro(regiao = "NORTE")
+#'df6 <- download_cadastro(unidade_federativa = "CE")
+#'}
+#'
+#'@note O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.
+#'Os parametros regiao e unidade_federativa devem sempre ser inseridos com letra
+#'maiuscula e entre aspas, conforme exemplo.
 
-#Function download_cadastro
 
 download_cadastro <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 
