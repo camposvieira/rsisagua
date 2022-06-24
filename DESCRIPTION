@@ -1,10 +1,13 @@
 Package: rsisagua
-Title: What the Package Does (One Line, Title Case)
+Title: Download and filter Sisagua files from Portal de Dados Abertos
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+    person("Gabriel", "Vieira", "camposvieiragabriel@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+Description: Conjunto de funções para download dos conjuntos de dados do Sistema de
+Informacoes de Vigilancia da Qualidade da Agua para Consumo Humano (Sisagua)
+disponiveis no Portal Brasileiro de Dados Abertos,com filtros por periodo,
+regiao geografica e unidade federativa.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
