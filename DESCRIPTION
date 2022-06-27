@@ -1,5 +1,5 @@
 Package: rsisagua
-Title: Download and filter Sisagua files from Portal de Dados Abertos
+Title: Download and filter Sisagua files from Portal Brasileiro de Dados Abertos
 Version: 0.0.0.9000
 Authors@R: person("Gabriel", "Vieira", email = "camposvieiragabriel@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
