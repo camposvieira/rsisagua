@@ -6,9 +6,9 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of rsisagua is to …
+The goal of rsisagua is to download and filter Sisagua files from
+Portal Brasileiro de Dados Abertos
 
--   Funções de download e filtro dos conjuntos de dados do sisagua
 
 ## Installation
 
