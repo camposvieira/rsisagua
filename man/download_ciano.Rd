@@ -25,10 +25,7 @@ Os parametros regiao e unidade_federativa devem sempre ser inseridos com letra
 maiuscula e entre aspas, conforme exemplo.
 }
 \examples{
-df <- download_ciano(c(2014:2020), "NORTE", c("AM", "PA", "RO"))
-df2 <- download_ciano(2020, unidade_federativa = "SC")
-df3 <- download_ciano(2015, regiao = "NORTE")
-df4 <- download_ciano(2022)
+df <- download_ciano(c(2019:2020), "NORTE", c("AM", "PA", "RO"))
 \dontrun{
 df5 <- download_ciano(regiao = "NORTE")
 df6 <- download_ciano(unidade_federativa = "CE")

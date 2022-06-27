@@ -1,8 +1,35 @@
-#Function download_tratamento (Tratamento de água)
+
+#'Function download_tratamento (Tratamento de água)
+#'
+#'@param periodo Selecao do ou dos anos de referencia, a partir de 2014.
+#'@param regiao Selecao da ou das regioes geograficas.
+#'@param unidade_federativa Selecao da ou das unidades federativas.
+#'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
+#'@export
+#'@examples
+#'df <- download_cmpb(c(2019:2020), "NORTE", c("AM", "PA", "RO"))
+#'\dontrun{
+#'df5 <- download_cmpb(regiao = "NORTE")
+#'df6 <- download_cmpb(unidade_federativa = "CE")
+#'}
+#'
+#'@note O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.
+#'Os parametros regiao e unidade_federativa devem sempre ser inseridos com letra
+#'maiuscula e entre aspas, conforme exemplo.
 
 download_tratamento <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 
-  #trazer aqui avisos para periodo, regiao e unidade federativa
+  #Initial Warnings
+  if (missing(periodo) & missing(regiao) & missing(unidade_federativa)){
+    usethis::ui_stop("Voce deve inserir, ao menos, o argumento periodo para
+    baixar os dados de todas as regioes e unidades federativas")
+  }
+
+
+  if (missing(periodo)){
+    usethis::ui_stop("Voce deve inserir os anos de selecao dos dados no argumento
+                     -periodo-")
+  }
 
   list_uf <- c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG",
                "MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR",

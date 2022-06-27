@@ -1,6 +1,20 @@
-
-
-#Function download_cmdp (Controle mensal demais parametros)
+#'Function download_cmdp (Controle mensal demais parametros)
+#'
+#'@param periodo Selecao do ou dos anos de referencia, a partir de 2014.
+#'@param regiao Selecao da ou das regioes geograficas.
+#'@param unidade_federativa Selecao da ou das unidades federativas.
+#'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
+#'@export
+#'@examples
+#'df <- download_cmdp(c(2019:2020), "NORTE", c("AM", "PA", "RO"))
+#'\dontrun{
+#'df5 <- download_cmdp(regiao = "NORTE")
+#'df6 <- download_cmdp(unidade_federativa = "CE")
+#'}
+#'
+#'@note O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.
+#'Os parametros regiao e unidade_federativa devem sempre ser inseridos com letra
+#'maiuscula e entre aspas, conforme exemplo.
 
 download_cmdp <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 

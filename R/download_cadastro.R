@@ -6,10 +6,7 @@
 #'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 #'@export
 #'@examples
-#'df <- download_cadastro(c(2014:2020), "NORTE", c("AM", "PA", "RO"))
-#'df2 <- download_cadastro(2020, unidade_federativa = "SC")
-#'df3 <- download_cadastro(2015, regiao = "NORTE")
-#'df4 <- download_cadastro(2022)
+#'df <- download_cadastro(c(2019:2020), "NORTE", c("AM", "PA", "RO"))
 #'\dontrun{
 #'df5 <- download_cadastro(regiao = "NORTE")
 #'df6 <- download_cadastro(unidade_federativa = "CE")
@@ -22,8 +19,21 @@
 
 download_cadastro <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 
-  #trazer aqui avisos para periodo, regiao e unidade federativa
-  #if (missing(uf)){usethis::ui_stop("recado")} print
+  #Initial Warnings
+  if (missing(periodo) &
+      missing(regiao) &
+      missing(unidade_federativa)) {
+    usethis::ui_stop(
+      "Voce deve inserir, ao menos, o argumento periodo para
+    baixar os dados de todas as regioes e unidades federativas"
+    )
+  }
+
+
+  if (missing(periodo)) {
+    usethis::ui_stop("Voce deve inserir os anos de selecao dos dados no argumento
+                     -periodo-")
+  }
 
   list_uf <- c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG",
                "MS","MT","PA","PB","PE","PI","PR","RJ","RN","RO","RR",
