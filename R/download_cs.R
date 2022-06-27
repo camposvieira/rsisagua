@@ -6,7 +6,6 @@
 #'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 #'@export
 #'@examples
-#'df <- download_cmpb(c(2019:2020), "NORTE", c("AM", "PA", "RO"))
 #'\dontrun{
 #'df5 <- download_cmpb(regiao = "NORTE")
 #'df6 <- download_cmpb(unidade_federativa = "CE")
@@ -69,9 +68,9 @@ download_cs <- function(periodo,regiao=NULL,unidade_federativa=NULL){
   #Load data and filter
   cs <- cs %>%
     janitor::clean_names() %>%
-    dplyr::filter(ano_de_referencia %in% periodo) %>%
-    dplyr::filter(regiao_geografica %in% regiao) %>%
-    dplyr::filter(uf %in% unidade_federativa)
+    dplyr::filter(cs$ano_de_referencia %in% periodo) %>%
+    dplyr::filter(cs$regiao_geografica %in% regiao) %>%
+    dplyr::filter(cs$uf %in% unidade_federativa)
 
   return(cs)
 }

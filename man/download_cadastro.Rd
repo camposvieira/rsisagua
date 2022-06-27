@@ -25,7 +25,6 @@ Os parametros regiao e unidade_federativa devem sempre ser inseridos com letra
 maiuscula e entre aspas, conforme exemplo.
 }
 \examples{
-df <- download_cadastro(c(2019:2020), "NORTE", c("AM", "PA", "RO"))
 \dontrun{
 df5 <- download_cadastro(regiao = "NORTE")
 df6 <- download_cadastro(unidade_federativa = "CE")

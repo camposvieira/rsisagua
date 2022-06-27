@@ -6,10 +6,6 @@
 #'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 #'@export
 #'@examples
-#'df <- download_cmamostras(c(2014:2020), "NORTE", c("AM", "PA", "RO"))
-#'df2 <- download_cmamostras(2020, unidade_federativa = "SC")
-#'df3 <- download_cmamostras(2015, regiao = "NORTE")
-#'df4 <- download_cmamostras(2022)
 #'\dontrun{
 #'df5 <- download_cmamostras(regiao = "NORTE")
 #'df6 <- download_cmamostras(unidade_federativa = "CE")
@@ -31,7 +27,7 @@ download_cmamostras <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 
   if (missing(periodo)){
     usethis::ui_stop("Voce deve inserir os anos de selecao dos dados no argumento
-                     -periodo-")
+                     periodo")
   }
 
   list_uf <- c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG",
@@ -57,9 +53,9 @@ download_cmamostras <- function(periodo,regiao=NULL,unidade_federativa=NULL){
   #Load data and filter
   cmamostras <- data.table::fread(datazip, sep=";") %>%
     janitor::clean_names() %>%
-    dplyr::filter(ano_de_referencia %in% periodo) %>%
-    dplyr::filter(regiao_geografica %in% regiao) %>%
-    dplyr::filter(uf %in% unidade_federativa)
+    dplyr::filter(cmamostras$ano_de_referencia %in% periodo) %>%
+    dplyr::filter(cmamostras$regiao_geografica %in% regiao) %>%
+    dplyr::filter(cmamostras$uf %in% unidade_federativa)
 
 
   return (cmamostras)

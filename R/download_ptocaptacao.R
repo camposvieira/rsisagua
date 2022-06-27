@@ -6,7 +6,6 @@
 #'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 #'@export
 #'@examples
-#'df <- download_cmpb(c(2019:2020), "NORTE", c("AM", "PA", "RO"))
 #'\dontrun{
 #'df5 <- download_cmpb(regiao = "NORTE")
 #'df6 <- download_cmpb(unidade_federativa = "CE")
@@ -27,7 +26,7 @@ download_ptocaptacao <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 
   if (missing(periodo)){
     usethis::ui_stop("Voce deve inserir os anos de selecao dos dados no argumento
-                     -periodo-")
+                     periodo")
   }
 
   list_uf <- c("AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MG",
@@ -53,9 +52,9 @@ download_ptocaptacao <- function(periodo,regiao=NULL,unidade_federativa=NULL){
   #Load data and filter
   ptocap <- data.table::fread(datazip, sep=";") %>%
     janitor::clean_names() %>%
-    dplyr::filter(ano_de_referencia %in% periodo) %>%
-    dplyr::filter(regiao_geografica %in% regiao) %>%
-    dplyr::filter(uf %in% unidade_federativa)
+    dplyr::filter(ptocap$ano_de_referencia %in% periodo) %>%
+    dplyr::filter(ptocap$regiao_geografica %in% regiao) %>%
+    dplyr::filter(ptocap$uf %in% unidade_federativa)
 
 
   return (ptocap)

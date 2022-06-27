@@ -20,4 +20,5 @@ Imports:
     janitor,
     dplyr,
     magrittr,
-    data.table
+    data.table,
+    usethis
