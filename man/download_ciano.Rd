@@ -2,7 +2,7 @@
 % Please edit documentation in R/download_ciano.R
 \name{download_ciano}
 \alias{download_ciano}
-\title{Function download_ciano (Cianotoxinas e cianobactérias)}
+\title{Download dos dados de Vigilância - Cianotoxinas e Cianobactérias}
 \usage{
 download_ciano(periodo, regiao = NULL, unidade_federativa = NULL)
 }
@@ -17,7 +17,12 @@ download_ciano(periodo, regiao = NULL, unidade_federativa = NULL)
 Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 }
 \description{
-Function download_ciano (Cianotoxinas e cianobactérias)
+Download dos dados de Vigilância - Cianotoxinas e Cianobactérias
+}
+\details{
+Essa funcao da acesso aos dados do monitoramento da qualidade da agua
+para consumo humano realizado pelo setor saude, contemplando os resultados
+das analises de cianobacterias e cianotoxinas.
 }
 \note{
 O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.

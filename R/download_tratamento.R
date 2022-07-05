@@ -1,9 +1,11 @@
-
-#'Function download_tratamento (Tratamento de água)
+#'Download dos dados de cadastro - Tratamento de agua
 #'
 #'@param periodo Selecao do ou dos anos de referencia, a partir de 2014.
 #'@param regiao Selecao da ou das regioes geograficas.
 #'@param unidade_federativa Selecao da ou das unidades federativas.
+#'@details Essa funcao da acesso aos dados sobre o tratamento de água empregado
+#'   nos sistemas e solucoes alternativas de abastecimento de agua para consumo humano,
+#'   informados pelo prestador de servico em frequencia anual.
 #'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 #'@export
 #'@examples

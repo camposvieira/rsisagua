@@ -2,7 +2,7 @@
 % Please edit documentation in R/download_ptocaptacao.R
 \name{download_ptocaptacao}
 \alias{download_ptocaptacao}
-\title{Function download_ptocaptacao (Pontos de captacao)}
+\title{Download dos dados de cadastro - Pontos de captacao}
 \usage{
 download_ptocaptacao(periodo, regiao = NULL, unidade_federativa = NULL)
 }
@@ -17,7 +17,12 @@ download_ptocaptacao(periodo, regiao = NULL, unidade_federativa = NULL)
 Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 }
 \description{
-Function download_ptocaptacao (Pontos de captacao)
+Download dos dados de cadastro - Pontos de captacao
+}
+\details{
+Essa funcao da acesso aos dados sobre os pontos de captacao de agua
+para consumo humano informados nos cadastros de sistemas e solucoes alternativas
+de abastecimento de agua para consumo humano.
 }
 \note{
 O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.

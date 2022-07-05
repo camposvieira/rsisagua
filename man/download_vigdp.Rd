@@ -2,7 +2,7 @@
 % Please edit documentation in R/download_vigdp.R
 \name{download_vigdp}
 \alias{download_vigdp}
-\title{Function download_vigdp (Vigilância - Demais parametros)}
+\title{Download dos dados de vigilancia - demais parametros}
 \usage{
 download_vigdp(periodo, regiao = NULL, unidade_federativa = NULL)
 }
@@ -17,7 +17,12 @@ download_vigdp(periodo, regiao = NULL, unidade_federativa = NULL)
 Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 }
 \description{
-Function download_vigdp (Vigilância - Demais parametros)
+Download dos dados de vigilancia - demais parametros
+}
+\details{
+Essa funcao da acesso aos dados do monitoramento da qualidade da agua
+realizado pelo setor saude conforme planos de monitoramento especificos,
+contemplando os resultados de analises de qualidade da agua de alta complexidade
 }
 \note{
 O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.

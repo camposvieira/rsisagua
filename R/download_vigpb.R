@@ -1,8 +1,13 @@
-#'Function download_vigpb (Vigilancia parametros basicos)
+#'Download dos dados de vigilancia - parametros basicos
 #'
 #'@param periodo Selecao do ou dos anos de referencia, a partir de 2014.
 #'@param regiao Selecao da ou das regioes geograficas.
 #'@param unidade_federativa Selecao da ou das unidades federativas.
+#'@details Essa funcao da acesso aos dados do monitoramento da qualidade da agua
+#'   para consumo humano realizado rotineiramente pelo setor saude, contemplando
+#'   os resultados das analises de qualidade da água de baixa complexidade:
+#'   Bacterias Heterotroficas, Cloro Residual Combinado, Cloro Residual Livre,
+#'   Coliformes Totais, Cor, Dioxido de Cloro, Escherichia Coli, Fluoreto, pH e Turbidez.
 #'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 #'@export
 #'@examples

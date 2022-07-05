@@ -1,8 +1,12 @@
-#'Function download_cmpb (Controle mensal parametros basicos)
+#'Download dos dados de controle mensal - parametros basicos
 #'
 #'@param periodo Selecao do ou dos anos de referencia, a partir de 2014.
 #'@param regiao Selecao da ou das regioes geograficas.
 #'@param unidade_federativa Selecao da ou das unidades federativas.
+#'@details Essa funcao da acesso aos dados do monitoramento mensal da qualidade da agua para
+#'    consumo humano realizado pelo prestador de servico de abastecimento
+#'    de agua por forma de abastecimento, conforme preconizado na norma
+#'    de potabilidade do Ministerio da Saude.
 #'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 #'@export
 #'@examples

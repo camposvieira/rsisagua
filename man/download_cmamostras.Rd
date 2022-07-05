@@ -2,7 +2,7 @@
 % Please edit documentation in R/download_cmamostras.R
 \name{download_cmamostras}
 \alias{download_cmamostras}
-\title{Function download_cmamostras (Controle mensal - Amostras fora do padrão)}
+\title{Download dos dados de controle mensal - Amostras fora do padrão}
 \usage{
 download_cmamostras(periodo, regiao = NULL, unidade_federativa = NULL)
 }
@@ -17,7 +17,13 @@ download_cmamostras(periodo, regiao = NULL, unidade_federativa = NULL)
 Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 }
 \description{
-Function download_cmamostras (Controle mensal - Amostras fora do padrão)
+Download dos dados de controle mensal - Amostras fora do padrão
+}
+\details{
+Essa funcao da acesso aos dados do monitoramento da qualidade da agua
+realizado pelo prestador de servico em frequencia inferior a mensal, contemplando
+o detalhamento dos resultados das analises de qualidade da agua que não atenderam
+ao padrao de potablidade.
 }
 \note{
 O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.

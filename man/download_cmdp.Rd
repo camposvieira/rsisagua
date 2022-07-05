@@ -2,7 +2,7 @@
 % Please edit documentation in R/download_cmdp.R
 \name{download_cmdp}
 \alias{download_cmdp}
-\title{Function download_cmdp (Controle mensal demais parametros)}
+\title{Download dos dados de controle mensal - demais parametros}
 \usage{
 download_cmdp(periodo, regiao = NULL, unidade_federativa = NULL)
 }
@@ -17,7 +17,12 @@ download_cmdp(periodo, regiao = NULL, unidade_federativa = NULL)
 Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 }
 \description{
-Function download_cmdp (Controle mensal demais parametros)
+Download dos dados de controle mensal - demais parametros
+}
+\details{
+Essa funcao da acesso aos dados do monitoramento da qualidade da agua
+realizado pelo prestador de servico em frequencia inferior a mensal, contemplando
+os resultados das analises de qualidade da agua de alta complexidade.
 }
 \note{
 O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.

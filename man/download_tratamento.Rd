@@ -2,7 +2,7 @@
 % Please edit documentation in R/download_tratamento.R
 \name{download_tratamento}
 \alias{download_tratamento}
-\title{Function download_tratamento (Tratamento de água)}
+\title{Download dos dados de cadastro - Tratamento de agua}
 \usage{
 download_tratamento(periodo, regiao = NULL, unidade_federativa = NULL)
 }
@@ -17,7 +17,12 @@ download_tratamento(periodo, regiao = NULL, unidade_federativa = NULL)
 Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 }
 \description{
-Function download_tratamento (Tratamento de água)
+Download dos dados de cadastro - Tratamento de agua
+}
+\details{
+Essa funcao da acesso aos dados sobre o tratamento de água empregado
+nos sistemas e solucoes alternativas de abastecimento de agua para consumo humano,
+informados pelo prestador de servico em frequencia anual.
 }
 \note{
 O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.

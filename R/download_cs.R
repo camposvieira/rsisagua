@@ -1,9 +1,12 @@
-#'Function download_cs (Controle semestral)
+#'Download dos dados de controle semestral
 #'
 #'@param periodo Selecao do ou dos anos de referencia, a partir de 2014.
 #'@param regiao Selecao da ou das regioes geograficas.
 #'@param unidade_federativa Selecao da ou das unidades federativas.
 #'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
+#'@details Essa funcao da acesso aos dados do monitoramento da qualidade da agua realizado
+#'   pelo prestador de servico em frequencia superior a mensal, contemplando os resultados
+#'   das analises de qualidade da agua de alta complexidade.
 #'@export
 #'@examples
 #'\dontrun{

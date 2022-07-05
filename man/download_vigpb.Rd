@@ -2,7 +2,7 @@
 % Please edit documentation in R/download_vigpb.R
 \name{download_vigpb}
 \alias{download_vigpb}
-\title{Function download_vigpb (Vigilancia parametros basicos)}
+\title{Download dos dados de vigilancia - parametros basicos}
 \usage{
 download_vigpb(periodo, regiao = NULL, unidade_federativa = NULL)
 }
@@ -17,7 +17,14 @@ download_vigpb(periodo, regiao = NULL, unidade_federativa = NULL)
 Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 }
 \description{
-Function download_vigpb (Vigilancia parametros basicos)
+Download dos dados de vigilancia - parametros basicos
+}
+\details{
+Essa funcao da acesso aos dados do monitoramento da qualidade da agua
+para consumo humano realizado rotineiramente pelo setor saude, contemplando
+os resultados das analises de qualidade da água de baixa complexidade:
+Bacterias Heterotroficas, Cloro Residual Combinado, Cloro Residual Livre,
+Coliformes Totais, Cor, Dioxido de Cloro, Escherichia Coli, Fluoreto, pH e Turbidez.
 }
 \note{
 O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.

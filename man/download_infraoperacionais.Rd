@@ -2,7 +2,7 @@
 % Please edit documentation in R/download_infraoperacionais.R
 \name{download_infraoperacionais}
 \alias{download_infraoperacionais}
-\title{Function download_infraoperacionais (Infraestrutura e Operacionais)}
+\title{Download dos dados de controle mensal - Infraestrutura e operacionais}
 \usage{
 download_infraoperacionais(periodo, regiao = NULL, unidade_federativa = NULL)
 }
@@ -17,7 +17,12 @@ download_infraoperacionais(periodo, regiao = NULL, unidade_federativa = NULL)
 Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 }
 \description{
-Function download_infraoperacionais (Infraestrutura e Operacionais)
+Download dos dados de controle mensal - Infraestrutura e operacionais
+}
+\details{
+Essa funcao da acesso aos dados sobre as condicoes operacionais e de
+infraestrutura dos sistemas e solucoes de abastecimento de agua para consumo humano,
+informados pelo prestador de servico em frequencia inferior a mensal.
 }
 \note{
 O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.

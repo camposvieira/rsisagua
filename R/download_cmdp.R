@@ -1,8 +1,11 @@
-#'Function download_cmdp (Controle mensal demais parametros)
+#'Download dos dados de controle mensal - demais parametros
 #'
 #'@param periodo Selecao do ou dos anos de referencia, a partir de 2014.
 #'@param regiao Selecao da ou das regioes geograficas.
 #'@param unidade_federativa Selecao da ou das unidades federativas.
+#'@details Essa funcao da acesso aos dados do monitoramento da qualidade da agua
+#'   realizado pelo prestador de servico em frequencia inferior a mensal, contemplando
+#'   os resultados das analises de qualidade da agua de alta complexidade.
 #'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 #'@export
 #'@examples

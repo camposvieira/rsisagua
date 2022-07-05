@@ -1,8 +1,11 @@
-#'Function download_vigdp (Vigilância - Demais parametros)
+#'Download dos dados de vigilancia - demais parametros
 #'
 #'@param periodo Selecao do ou dos anos de referencia, a partir de 2014.
 #'@param regiao Selecao da ou das regioes geograficas.
 #'@param unidade_federativa Selecao da ou das unidades federativas.
+#'@details Essa funcao da acesso aos dados do monitoramento da qualidade da agua
+#'   realizado pelo setor saude conforme planos de monitoramento especificos,
+#'   contemplando os resultados de analises de qualidade da agua de alta complexidade
 #'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 #'@export
 #'@examples

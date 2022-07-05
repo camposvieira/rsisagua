@@ -2,7 +2,7 @@
 % Please edit documentation in R/download_cadastro.R
 \name{download_cadastro}
 \alias{download_cadastro}
-\title{Download dados de cadastro e populacao abastecida}
+\title{Download dos dados de cadastro e populacao abastecida}
 \usage{
 download_cadastro(periodo, regiao = NULL, unidade_federativa = NULL)
 }
@@ -17,7 +17,12 @@ download_cadastro(periodo, regiao = NULL, unidade_federativa = NULL)
 Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 }
 \description{
-Download dados de cadastro e populacao abastecida
+Download dos dados de cadastro e populacao abastecida
+}
+\details{
+Essa funcao da acesso aos quantitativos domicilios abastecidos por sistemas
+e solucoes alternativas de abastecimento de água para consumo humano, por municipio,
+com dados sobre as formas de abastecimento.
 }
 \note{
 O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.

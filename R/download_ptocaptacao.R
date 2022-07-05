@@ -1,8 +1,11 @@
-#'Function download_ptocaptacao (Pontos de captacao)
+#'Download dos dados de cadastro - Pontos de captacao
 #'
 #'@param periodo Selecao do ou dos anos de referencia, a partir de 2014.
 #'@param regiao Selecao da ou das regioes geograficas.
 #'@param unidade_federativa Selecao da ou das unidades federativas.
+#'@details Essa funcao da acesso aos dados sobre os pontos de captacao de agua
+#'   para consumo humano informados nos cadastros de sistemas e solucoes alternativas
+#'   de abastecimento de agua para consumo humano.
 #'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 #'@export
 #'@examples

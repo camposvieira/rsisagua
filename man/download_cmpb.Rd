@@ -2,7 +2,7 @@
 % Please edit documentation in R/download_cmpb.R
 \name{download_cmpb}
 \alias{download_cmpb}
-\title{Function download_cmpb (Controle mensal parametros basicos)}
+\title{Download dos dados de controle mensal - parametros basicos}
 \usage{
 download_cmpb(periodo, regiao = NULL, unidade_federativa = NULL)
 }
@@ -17,7 +17,13 @@ download_cmpb(periodo, regiao = NULL, unidade_federativa = NULL)
 Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 }
 \description{
-Function download_cmpb (Controle mensal parametros basicos)
+Download dos dados de controle mensal - parametros basicos
+}
+\details{
+Essa funcao da acesso aos dados do monitoramento mensal da qualidade da agua para
+consumo humano realizado pelo prestador de servico de abastecimento
+de agua por forma de abastecimento, conforme preconizado na norma
+de potabilidade do Ministerio da Saude.
 }
 \note{
 O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.

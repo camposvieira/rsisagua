@@ -1,8 +1,11 @@
-#'Download dados de cadastro e populacao abastecida
+#'Download dos dados de cadastro e populacao abastecida
 #'
 #'@param periodo Selecao do ou dos anos de referencia, a partir de 2014.
 #'@param regiao Selecao da ou das regioes geograficas.
 #'@param unidade_federativa Selecao da ou das unidades federativas.
+#'@details Essa funcao da acesso aos quantitativos domicilios abastecidos por sistemas
+#'   e solucoes alternativas de abastecimento de água para consumo humano, por municipio,
+#'   com dados sobre as formas de abastecimento.
 #'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 #'@export
 #'@examples

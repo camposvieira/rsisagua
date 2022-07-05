@@ -1,8 +1,11 @@
-#'Function download_ciano (Cianotoxinas e cianobactérias)
+#'Download dos dados de Vigilância - Cianotoxinas e Cianobactérias
 #'
 #'@param periodo Selecao do ou dos anos de referencia, a partir de 2014.
 #'@param regiao Selecao da ou das regioes geograficas.
 #'@param unidade_federativa Selecao da ou das unidades federativas.
+#'@details Essa funcao da acesso aos dados do monitoramento da qualidade da agua
+#'   para consumo humano realizado pelo setor saude, contemplando os resultados
+#'   das analises de cianobacterias e cianotoxinas.
 #'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 #'@export
 #'@examples

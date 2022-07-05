@@ -1,9 +1,12 @@
-#'Function download_infraoperacionais (Infraestrutura e Operacionais)
+#'Download dos dados de controle mensal - Infraestrutura e operacionais
 #'
 #'@param periodo Selecao do ou dos anos de referencia, a partir de 2014.
 #'@param regiao Selecao da ou das regioes geograficas.
 #'@param unidade_federativa Selecao da ou das unidades federativas.
 #'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
+#'@details Essa funcao da acesso aos dados sobre as condicoes operacionais e de
+#'   infraestrutura dos sistemas e solucoes de abastecimento de agua para consumo humano,
+#'   informados pelo prestador de servico em frequencia inferior a mensal.
 #'@export
 #'@examples
 #'\dontrun{
