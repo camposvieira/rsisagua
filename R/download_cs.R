@@ -7,16 +7,15 @@
 #'@details Essa funcao da acesso aos dados do monitoramento da qualidade da agua realizado
 #'   pelo prestador de servico em frequencia superior a mensal, contemplando os resultados
 #'   das analises de qualidade da agua de alta complexidade.
-#'@export
 #'@examples
 #'\dontrun{
 #'df5 <- download_cmpb(regiao = "NORTE")
 #'df6 <- download_cmpb(unidade_federativa = "CE")
 #'}
-#'
 #'@note O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.
 #'Os parametros regiao e unidade_federativa devem sempre ser inseridos com letra
 #'maiuscula e entre aspas, conforme exemplo.
+#'@export
 
 download_cs <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 

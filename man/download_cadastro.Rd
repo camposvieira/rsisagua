@@ -21,7 +21,7 @@ Download dos dados de cadastro e populacao abastecida
 }
 \details{
 Essa funcao da acesso aos quantitativos domicilios abastecidos por sistemas
-e solucoes alternativas de abastecimento de água para consumo humano, por municipio,
+e solucoes alternativas de abastecimento de agua para consumo humano, por municipio,
 com dados sobre as formas de abastecimento.
 }
 \note{
@@ -34,5 +34,4 @@ maiuscula e entre aspas, conforme exemplo.
 df5 <- download_cadastro(regiao = "NORTE")
 df6 <- download_cadastro(unidade_federativa = "CE")
 }
-
 }

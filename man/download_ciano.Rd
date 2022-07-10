@@ -2,7 +2,7 @@
 % Please edit documentation in R/download_ciano.R
 \name{download_ciano}
 \alias{download_ciano}
-\title{Download dos dados de Vigilância - Cianotoxinas e Cianobactérias}
+\title{Download dos dados de Vigilancia - Cianotoxinas e Cianobacterias}
 \usage{
 download_ciano(periodo, regiao = NULL, unidade_federativa = NULL)
 }
@@ -17,7 +17,7 @@ download_ciano(periodo, regiao = NULL, unidade_federativa = NULL)
 Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 }
 \description{
-Download dos dados de Vigilância - Cianotoxinas e Cianobactérias
+Download dos dados de Vigilancia - Cianotoxinas e Cianobacterias
 }
 \details{
 Essa funcao da acesso aos dados do monitoramento da qualidade da agua
@@ -34,5 +34,4 @@ maiuscula e entre aspas, conforme exemplo.
 df5 <- download_ciano(regiao = "NORTE")
 df6 <- download_ciano(unidade_federativa = "CE")
 }
-
 }

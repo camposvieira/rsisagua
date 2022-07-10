@@ -8,16 +8,15 @@
 #'    de agua por forma de abastecimento, conforme preconizado na norma
 #'    de potabilidade do Ministerio da Saude.
 #'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
-#'@export
 #'@examples
 #'\dontrun{
 #'df5 <- download_cmpb(regiao = "NORTE")
 #'df6 <- download_cmpb(unidade_federativa = "CE")
 #'}
-#'
 #'@note O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.
 #'Os parametros regiao e unidade_federativa devem sempre ser inseridos com letra
 #'maiuscula e entre aspas, conforme exemplo.
+#'@export
 
 download_cmpb <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 

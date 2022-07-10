@@ -7,16 +7,15 @@
 #'@details Essa funcao da acesso aos dados sobre as condicoes operacionais e de
 #'   infraestrutura dos sistemas e solucoes de abastecimento de agua para consumo humano,
 #'   informados pelo prestador de servico em frequencia inferior a mensal.
-#'@export
 #'@examples
 #'\dontrun{
 #'df5 <- download_cmpb(regiao = "NORTE")
 #'df6 <- download_cmpb(unidade_federativa = "CE")
 #'}
-#'
 #'@note O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.
 #'Os parametros regiao e unidade_federativa devem sempre ser inseridos com letra
 #'maiuscula e entre aspas, conforme exemplo.
+#'#'@export
 
 download_infraoperacionais <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 

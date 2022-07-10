@@ -3,20 +3,19 @@
 #'@param periodo Selecao do ou dos anos de referencia, a partir de 2014.
 #'@param regiao Selecao da ou das regioes geograficas.
 #'@param unidade_federativa Selecao da ou das unidades federativas.
-#'@details Essa funcao da acesso aos dados sobre o tratamento de água empregado
+#'@details Essa funcao da acesso aos dados sobre o tratamento de agua empregado
 #'   nos sistemas e solucoes alternativas de abastecimento de agua para consumo humano,
 #'   informados pelo prestador de servico em frequencia anual.
 #'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
-#'@export
 #'@examples
 #'\dontrun{
 #'df5 <- download_cmpb(regiao = "NORTE")
 #'df6 <- download_cmpb(unidade_federativa = "CE")
 #'}
-#'
 #'@note O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.
 #'Os parametros regiao e unidade_federativa devem sempre ser inseridos com letra
 #'maiuscula e entre aspas, conforme exemplo.
+#'@export
 
 download_tratamento <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 

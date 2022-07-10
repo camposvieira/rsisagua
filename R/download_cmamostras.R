@@ -1,23 +1,22 @@
-#'Download dos dados de controle mensal - Amostras fora do padrão
+#'Download dos dados de controle mensal - Amostras fora do padrao
 #'
 #'@param periodo Selecao do ou dos anos de referencia, a partir de 2014.
 #'@param regiao Selecao da ou das regioes geograficas.
 #'@param unidade_federativa Selecao da ou das unidades federativas.
 #'@details Essa funcao da acesso aos dados do monitoramento da qualidade da agua
 #'   realizado pelo prestador de servico em frequencia inferior a mensal, contemplando
-#'   o detalhamento dos resultados das analises de qualidade da agua que não atenderam
+#'   o detalhamento dos resultados das analises de qualidade da agua que nao atenderam
 #'   ao padrao de potablidade.
 #'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
-#'@export
 #'@examples
 #'\dontrun{
 #'df5 <- download_cmamostras(regiao = "NORTE")
 #'df6 <- download_cmamostras(unidade_federativa = "CE")
 #'}
-#'
 #'@note O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.
 #'Os parametros regiao e unidade_federativa devem sempre ser inseridos com letra
 #'maiuscula e entre aspas, conforme exemplo.
+#'@export
 
 download_cmamostras <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 
@@ -55,7 +54,8 @@ download_cmamostras <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 
 
   #Load data and filter
-  cmamostras <- data.table::fread(datazip, sep=";") %>%
+  cmamostras <- data.table::fread(datazip, sep=";")
+  cmamostras <- cmamostras %>%
     janitor::clean_names() %>%
     dplyr::filter(cmamostras$ano_de_referencia %in% periodo) %>%
     dplyr::filter(cmamostras$regiao_geografica %in% regiao) %>%

@@ -1,4 +1,4 @@
-#'Download dos dados de Vigilância - Cianotoxinas e Cianobactérias
+#'Download dos dados de Vigilancia - Cianotoxinas e Cianobacterias
 #'
 #'@param periodo Selecao do ou dos anos de referencia, a partir de 2014.
 #'@param regiao Selecao da ou das regioes geograficas.
@@ -7,16 +7,15 @@
 #'   para consumo humano realizado pelo setor saude, contemplando os resultados
 #'   das analises de cianobacterias e cianotoxinas.
 #'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
-#'@export
 #'@examples
 #'\dontrun{
 #'df5 <- download_ciano(regiao = "NORTE")
 #'df6 <- download_ciano(unidade_federativa = "CE")
 #'}
-#'
 #'@note O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.
 #'Os parametros regiao e unidade_federativa devem sempre ser inseridos com letra
 #'maiuscula e entre aspas, conforme exemplo.
+#'@export
 
 download_ciano <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 
@@ -53,11 +52,12 @@ download_ciano <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 
 
   #Load data and filter
-  ciano <- data.table::fread(datazip, sep=";") %>%
+  ciano <- data.table::fread(datazip, sep=";")
+  ciano <-  ciano %>%
     janitor::clean_names() %>%
-    dplyr::filter(ciano$ano %in% periodo) %>%
-    dplyr::filter(ciano$regiao_geografica %in% regiao) %>%
-    dplyr::filter(ciano$uf %in% unidade_federativa)
+    dplyr::filter(ano %in% periodo) %>%
+    dplyr::filter(regiao_geografica %in% regiao) %>%
+    dplyr::filter(uf %in% unidade_federativa)
 
 
   return (ciano)

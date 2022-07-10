@@ -35,5 +35,4 @@ maiuscula e entre aspas, conforme exemplo.
 df5 <- download_cmpb(regiao = "NORTE")
 df6 <- download_cmpb(unidade_federativa = "CE")
 }
-
 }

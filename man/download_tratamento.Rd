@@ -20,7 +20,7 @@ Data frame do conjunto de dados com filtros a partir dos parametros da funcao
 Download dos dados de cadastro - Tratamento de agua
 }
 \details{
-Essa funcao da acesso aos dados sobre o tratamento de água empregado
+Essa funcao da acesso aos dados sobre o tratamento de agua empregado
 nos sistemas e solucoes alternativas de abastecimento de agua para consumo humano,
 informados pelo prestador de servico em frequencia anual.
 }
@@ -34,5 +34,4 @@ maiuscula e entre aspas, conforme exemplo.
 df5 <- download_cmpb(regiao = "NORTE")
 df6 <- download_cmpb(unidade_federativa = "CE")
 }
-
 }

@@ -4,19 +4,18 @@
 #'@param regiao Selecao da ou das regioes geograficas.
 #'@param unidade_federativa Selecao da ou das unidades federativas.
 #'@details Essa funcao da acesso aos quantitativos domicilios abastecidos por sistemas
-#'   e solucoes alternativas de abastecimento de água para consumo humano, por municipio,
+#'   e solucoes alternativas de abastecimento de agua para consumo humano, por municipio,
 #'   com dados sobre as formas de abastecimento.
 #'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
-#'@export
 #'@examples
 #'\dontrun{
 #'df5 <- download_cadastro(regiao = "NORTE")
 #'df6 <- download_cadastro(unidade_federativa = "CE")
 #'}
-#'
 #'@note O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.
 #'Os parametros regiao e unidade_federativa devem sempre ser inseridos com letra
 #'maiuscula e entre aspas, conforme exemplo.
+#'@export
 
 
 download_cadastro <- function(periodo,regiao=NULL,unidade_federativa=NULL){
@@ -61,9 +60,9 @@ download_cadastro <- function(periodo,regiao=NULL,unidade_federativa=NULL){
   cadastro <- data.table::fread(datazip, sep=";") %>%
     janitor::clean_names()
   cadastro <- cadastro %>%
-    dplyr::filter(ano_de_referencia %in% periodo) %>%
-    dplyr::filter(regiao_geografica %in% regiao) %>%
-    dplyr::filter(uf %in% unidade_federativa)
+    dplyr::filter(cadastro$ano_de_referencia %in% periodo) %>%
+    dplyr::filter(cadastro$regiao_geografica %in% regiao) %>%
+    dplyr::filter(cadastro$uf %in% unidade_federativa)
 
 
   return (cadastro)

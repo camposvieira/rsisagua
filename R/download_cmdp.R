@@ -7,16 +7,15 @@
 #'   realizado pelo prestador de servico em frequencia inferior a mensal, contemplando
 #'   os resultados das analises de qualidade da agua de alta complexidade.
 #'@return Data frame do conjunto de dados com filtros a partir dos parametros da funcao
-#'@export
 #'@examples
 #'\dontrun{
 #'df5 <- download_cmdp(regiao = "NORTE")
 #'df6 <- download_cmdp(unidade_federativa = "CE")
 #'}
-#'
 #'@note O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.
 #'Os parametros regiao e unidade_federativa devem sempre ser inseridos com letra
 #'maiuscula e entre aspas, conforme exemplo.
+#'@export
 
 download_cmdp <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 

@@ -22,7 +22,7 @@ Download dos dados de vigilancia - parametros basicos
 \details{
 Essa funcao da acesso aos dados do monitoramento da qualidade da agua
 para consumo humano realizado rotineiramente pelo setor saude, contemplando
-os resultados das analises de qualidade da água de baixa complexidade:
+os resultados das analises de qualidade da agua de baixa complexidade:
 Bacterias Heterotroficas, Cloro Residual Combinado, Cloro Residual Livre,
 Coliformes Totais, Cor, Dioxido de Cloro, Escherichia Coli, Fluoreto, pH e Turbidez.
 }
@@ -36,5 +36,4 @@ maiuscula e entre aspas, conforme exemplo.
 df5 <- download_cmpb(regiao = "NORTE")
 df6 <- download_cmpb(unidade_federativa = "CE")
 }
-
 }
