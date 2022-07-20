@@ -55,9 +55,9 @@ download_ciano <- function(periodo,regiao=NULL,unidade_federativa=NULL){
   ciano <- data.table::fread(datazip, sep=";")
   ciano <-  ciano %>%
     janitor::clean_names() %>%
-    dplyr::filter(ano %in% periodo) %>%
-    dplyr::filter(regiao_geografica %in% regiao) %>%
-    dplyr::filter(uf %in% unidade_federativa)
+    dplyr::filter(ano %in% {{periodo}}) %>%
+    dplyr::filter(regiao_geografica %in% {{regiao}}) %>%
+    dplyr::filter(uf %in% {{unidade_federativa}})
 
 
   return (ciano)

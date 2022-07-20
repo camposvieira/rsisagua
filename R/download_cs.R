@@ -70,9 +70,9 @@ download_cs <- function(periodo,regiao=NULL,unidade_federativa=NULL){
   #Load data and filter
   cs <- cs %>%
     janitor::clean_names() %>%
-    dplyr::filter(cs$ano_de_referencia %in% periodo) %>%
-    dplyr::filter(cs$regiao_geografica %in% regiao) %>%
-    dplyr::filter(cs$uf %in% unidade_federativa)
+    dplyr::filter(ano_de_referencia %in% {{periodo}}) %>%
+    dplyr::filter(regiao_geografica %in% {{regiao}}) %>%
+    dplyr::filter(uf %in% {{unidade_federativa}})
 
   return(cs)
 }

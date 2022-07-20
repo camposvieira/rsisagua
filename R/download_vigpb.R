@@ -71,9 +71,9 @@ download_vigpb <- function(periodo,regiao=NULL,unidade_federativa=NULL){
   #Load data and filter
   vigpb <- vigpb %>%
     janitor::clean_names() %>%
-    dplyr::filter(vigpb$ano %in% periodo) %>%
-    dplyr::filter(vigpb$regiao_geografica %in% regiao) %>%
-    dplyr::filter(vigpb$uf %in% unidade_federativa)
+    dplyr::filter(ano %in% {{periodo}}) %>%
+    dplyr::filter(regiao_geografica %in% {{regiao}}) %>%
+    dplyr::filter(uf %in% {{unidade_federativa}})
 
   return(vigpb)
 }

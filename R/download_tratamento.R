@@ -54,9 +54,9 @@ download_tratamento <- function(periodo,regiao=NULL,unidade_federativa=NULL){
   #Load data and filter
   trat <- data.table::fread(datazip, sep=";") %>%
     janitor::clean_names() %>%
-    dplyr::filter(trat$ano_de_referencia %in% periodo) %>%
-    dplyr::filter(trat$regiao_geografica %in% regiao) %>%
-    dplyr::filter(trat$uf %in% unidade_federativa)
+    dplyr::filter(ano_de_referencia %in% {{periodo}}) %>%
+    dplyr::filter(regiao_geografica %in% {{regiao}}) %>%
+    dplyr::filter(uf %in% {{unidade_federativa}})
 
 
   return (trat)

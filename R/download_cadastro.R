@@ -60,9 +60,9 @@ download_cadastro <- function(periodo,regiao=NULL,unidade_federativa=NULL){
   cadastro <- data.table::fread(datazip, sep=";") %>%
     janitor::clean_names()
   cadastro <- cadastro %>%
-    dplyr::filter(cadastro$ano_de_referencia %in% periodo) %>%
-    dplyr::filter(cadastro$regiao_geografica %in% regiao) %>%
-    dplyr::filter(cadastro$uf %in% unidade_federativa)
+    dplyr::filter(ano_de_referencia %in% {{periodo}}) %>%
+    dplyr::filter(regiao_geografica %in% {{regiao}}) %>%
+    dplyr::filter(uf %in% {{unidade_federativa}})
 
 
   return (cadastro)

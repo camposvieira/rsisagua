@@ -71,9 +71,9 @@ download_cmpb <- function(periodo,regiao=NULL,unidade_federativa=NULL){
   #Load data and filter
   cmpb <- cmpb %>%
     janitor::clean_names() %>%
-    dplyr::filter(cmpb$ano_de_referencia %in% periodo) %>%
-    dplyr::filter(cmpb$regiao_geografica %in% regiao) %>%
-    dplyr::filter(cmpb$uf %in% unidade_federativa)
+    dplyr::filter(ano_de_referencia %in% {{periodo}}) %>%
+    dplyr::filter(regiao_geografica %in% {{regiao}}) %>%
+    dplyr::filter(uf %in% {{unidade_federativa}})
 
   return(cmpb)
 }

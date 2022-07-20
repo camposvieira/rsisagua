@@ -57,9 +57,9 @@ download_cmamostras <- function(periodo,regiao=NULL,unidade_federativa=NULL){
   cmamostras <- data.table::fread(datazip, sep=";")
   cmamostras <- cmamostras %>%
     janitor::clean_names() %>%
-    dplyr::filter(cmamostras$ano_de_referencia %in% periodo) %>%
-    dplyr::filter(cmamostras$regiao_geografica %in% regiao) %>%
-    dplyr::filter(cmamostras$uf %in% unidade_federativa)
+    dplyr::filter(ano_de_referencia %in% {{periodo}}) %>%
+    dplyr::filter(regiao_geografica %in% {{regiao}}) %>%
+    dplyr::filter(uf %in% {{unidade_federativa}})
 
 
   return (cmamostras)

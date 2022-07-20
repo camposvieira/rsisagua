@@ -54,9 +54,9 @@ download_infraoperacionais <- function(periodo,regiao=NULL,unidade_federativa=NU
   #Load data and filter
   infra_operacionais <- data.table::fread(datazip, sep=";") %>%
     janitor::clean_names() %>%
-    dplyr::filter(infra_operacionais$ano_de_referencia %in% periodo) %>%
-    dplyr::filter(infra_operacionais$regiao_geografica %in% regiao) %>%
-    dplyr::filter(infra_operacionais$uf %in% unidade_federativa)
+    dplyr::filter(ano_de_referencia %in% {{periodo}}) %>%
+    dplyr::filter(regiao_geografica %in% {{regiao}}) %>%
+    dplyr::filter(uf %in% {{unidade_federativa}})
 
 
   return (infra_operacionais)

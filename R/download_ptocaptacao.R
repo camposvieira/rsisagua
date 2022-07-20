@@ -54,9 +54,9 @@ download_ptocaptacao <- function(periodo,regiao=NULL,unidade_federativa=NULL){
   #Load data and filter
   ptocap <- data.table::fread(datazip, sep=";") %>%
     janitor::clean_names() %>%
-    dplyr::filter(ptocap$ano_de_referencia %in% periodo) %>%
-    dplyr::filter(ptocap$regiao_geografica %in% regiao) %>%
-    dplyr::filter(ptocap$uf %in% unidade_federativa)
+    dplyr::filter(ano_de_referencia %in% {{periodo}}) %>%
+    dplyr::filter(regiao_geografica %in% {{regiao}}) %>%
+    dplyr::filter(uf %in% {{unidade_federativa}})
 
 
   return (ptocap)

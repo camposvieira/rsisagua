@@ -54,9 +54,9 @@ download_vigdp <- function(periodo,regiao=NULL,unidade_federativa=NULL){
   #Load data and filter
   vigdp <- data.table::fread(datazip, sep=";") %>%
     janitor::clean_names() %>%
-    dplyr::filter(vigdp$ano %in% periodo) %>%
-    dplyr::filter(vigdp$regiao_geografica %in% regiao) %>%
-    dplyr::filter(vigdp$uf %in% unidade_federativa)
+    dplyr::filter(ano %in% {{periodo}}) %>%
+    dplyr::filter(regiao_geografica %in% {{regiao}}) %>%
+    dplyr::filter(uf %in% {{unidade_federativa}})
 
 
   return (vigdp)
