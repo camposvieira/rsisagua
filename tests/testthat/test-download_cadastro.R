@@ -1,3 +1,5 @@
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+test_that("download_cadastro funciona", {
+
+  cadastro <- download_cadastro(2022)
+  expect_equal(ncol(cadastro),35)
 })
