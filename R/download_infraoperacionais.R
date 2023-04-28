@@ -15,7 +15,7 @@
 #'@note O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.
 #'Os parametros regiao e unidade_federativa devem sempre ser inseridos com letra
 #'maiuscula e entre aspas, conforme exemplo.
-#'#'@export
+#'@export
 
 download_infraoperacionais <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 
@@ -52,7 +52,7 @@ download_infraoperacionais <- function(periodo,regiao=NULL,unidade_federativa=NU
 
 
   #Load data and filter
-  infra_operacionais <- data.table::fread(datazip, sep=";") %>%
+  infra_operacionais <- data.table::fread(datazip, sep=";", encoding = "Latin-1") %>%
     janitor::clean_names() %>%
     dplyr::filter(ano_de_referencia %in% {{periodo}}) %>%
     dplyr::filter(regiao_geografica %in% {{regiao}}) %>%

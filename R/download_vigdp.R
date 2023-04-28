@@ -52,7 +52,7 @@ download_vigdp <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 
 
   #Load data and filter
-  vigdp <- data.table::fread(datazip, sep=";") %>%
+  vigdp <- data.table::fread(datazip, sep=";", encoding = "Latin-1") %>%
     janitor::clean_names() %>%
     dplyr::filter(ano %in% {{periodo}}) %>%
     dplyr::filter(regiao_geografica %in% {{regiao}}) %>%

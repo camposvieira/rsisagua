@@ -53,7 +53,7 @@ download_cs <- function(periodo,regiao=NULL,unidade_federativa=NULL){
     temp <- tempfile(fileext = ".zip")
     utils::download.file(url = url, destfile = temp)
     datazip <- utils::unzip(temp, files = name_file)
-    output <- data.table::fread(datazip, sep=";")
+    output <- data.table::fread(datazip, sep=";", encoding = "Latin-1")
     return(output)
   }
 

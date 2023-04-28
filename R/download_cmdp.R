@@ -53,7 +53,7 @@ download_cmdp <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 
 
   #Load data and filter
-  cmdp <- data.table::fread(datazip, sep=";") %>%
+  cmdp <- data.table::fread(datazip, sep=";", encoding = "Latin-1") %>%
     janitor::clean_names() %>%
     dplyr::filter(ano_de_referencia %in% {{periodo}}) %>%
     dplyr::filter(regiao_geografica %in% {{regiao}}) %>%

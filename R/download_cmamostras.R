@@ -54,7 +54,7 @@ download_cmamostras <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 
 
   #Load data and filter
-  cmamostras <- data.table::fread(datazip, sep=";")
+  cmamostras <- data.table::fread(datazip, sep=";", encoding = "Latin-1")
   cmamostras <- cmamostras %>%
     janitor::clean_names() %>%
     dplyr::filter(ano_de_referencia %in% {{periodo}}) %>%

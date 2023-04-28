@@ -57,7 +57,7 @@ download_cadastro <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 
 
   #Load data and filter
-  cadastro <- data.table::fread(datazip, sep=";") %>%
+  cadastro <- data.table::fread(datazip, sep=";", encoding = "Latin-1") %>%
     janitor::clean_names()
   cadastro <- cadastro %>%
     dplyr::filter(ano_de_referencia %in% {{periodo}}) %>%

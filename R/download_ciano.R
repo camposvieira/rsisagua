@@ -52,7 +52,7 @@ download_ciano <- function(periodo,regiao=NULL,unidade_federativa=NULL){
 
 
   #Load data and filter
-  ciano <- data.table::fread(datazip, sep=";")
+  ciano <- data.table::fread(datazip, sep=";", encoding = "Latin-1")
   ciano <-  ciano %>%
     janitor::clean_names() %>%
     dplyr::filter(ano %in% {{periodo}}) %>%
