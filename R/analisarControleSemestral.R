@@ -24,7 +24,7 @@
 #'
 #'@param periodo numeric vector Selecao do ou dos anos de referencia, a partir de 2014.
 #'@param regiao string vector Selecao da ou das regioes geograficas.
-#'@param unidade_federativa string vector Selecao da ou das unidades federativas.
+#'@param uf string vector Selecao da ou das unidades federativas.
 #'@param municipios string vector Selecao do ou dos municipios.
 #'
 #'@details Essa funcao carrega os dados de controle semestral e os analisa de acordo com
@@ -56,7 +56,7 @@ analisarControleSemestral <- function(periodo, regiao = NULL, uf = NULL, municip
 
   #Filtrar muncípios a partir do argumento da função existente
   if(is.null(municipios) == FALSE){
-    cs <- cs |> dplyr::filter(municipio %in% municipios)
+    cs <- cs |> dplyr::filter(municipio %in% {{municipios}})
   }
 
   #Se não houver município no argumento, segue sem o filtro

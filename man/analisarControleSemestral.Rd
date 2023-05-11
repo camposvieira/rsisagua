@@ -11,9 +11,9 @@ analisarControleSemestral(periodo, regiao = NULL, uf = NULL, municipios = NULL)
 
 \item{regiao}{string vector Selecao da ou das regioes geograficas.}
 
-\item{municipios}{string vector Selecao do ou dos municipios.}
+\item{uf}{string vector Selecao da ou das unidades federativas.}
 
-\item{unidade_federativa}{string vector Selecao da ou das unidades federativas.}
+\item{municipios}{string vector Selecao do ou dos municipios.}
 }
 \value{
 Data frame do conjunto de dados de controle semestral com o total de analises
