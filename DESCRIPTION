@@ -1,6 +1,6 @@
 Package: rsisagua
 Title: Download and filter Sisagua files from Portal Brasileiro de Dados Abertos
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: person("Gabriel", "Vieira", email = "camposvieiragabriel@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: Conjunto de funcoes para download dos conjuntos de dados do Sistema de    
@@ -10,7 +10,7 @@ Description: Conjunto de funcoes para download dos conjuntos de dados do Sistema
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.1
 URL: https://github.com/camposvieira/rsisagua
 BugReports: https://github.com/camposvieira/rsisagua/issues
 Suggests: 

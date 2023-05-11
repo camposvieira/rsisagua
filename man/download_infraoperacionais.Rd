@@ -28,7 +28,6 @@ informados pelo prestador de servico em frequencia inferior a mensal.
 O periodo de dados e um campo obrigatorio e inicia em 2014 ate o ano atual.
 Os parametros regiao e unidade_federativa devem sempre ser inseridos com letra
 maiuscula e entre aspas, conforme exemplo.
-#'@export
 }
 \examples{
 \dontrun{
