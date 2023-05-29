@@ -143,7 +143,7 @@ analisarControleSemestral <- function(periodo, regiao = NULL, uf = NULL, municip
   resume_cs <- analise_cs |>
     dplyr::group_by(municipio, uf,
              nome_da_forma_de_abastecimento,
-             #ano_de_referencia,
+             ano_de_referencia,
              #semestre_de_referencia,
              ponto_de_monitoramento,
              parametro.y,
@@ -168,6 +168,11 @@ analisarControleSemestral <- function(periodo, regiao = NULL, uf = NULL, municip
     dplyr::select(-n_inconclusivo, -n_conformidade) |>
     dplyr::rename("analises_acima_vmp" = n_nao_conforme,
            "parametro" = parametro.y)
+
+
+  # Ajuste de valores em notação científica
+
+  options(scipen = 999)
 
 
   return(resume_cs)
