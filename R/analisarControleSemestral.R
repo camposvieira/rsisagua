@@ -146,6 +146,7 @@ analisarControleSemestral <- function(periodo, regiao = NULL, uf = NULL, municip
              ano_de_referencia,
              #semestre_de_referencia,
              ponto_de_monitoramento,
+             grupo_de_parametros,
              parametro.y,
              vmp_ate_2021,
              vmp_novo
