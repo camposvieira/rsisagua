@@ -142,8 +142,8 @@ analisarControleSemestral <- function(periodo, regiao = NULL, uf = NULL, municip
 
   resume_cs <- analise_cs |>
     dplyr::group_by(municipio, uf,
-             codigo_forma_de_abastecimento,
-             nome_da_forma_de_abastecimento,
+             #codigo_forma_de_abastecimento,
+             #nome_da_forma_de_abastecimento,
              ano_de_referencia,
              #semestre_de_referencia,
              ponto_de_monitoramento,
