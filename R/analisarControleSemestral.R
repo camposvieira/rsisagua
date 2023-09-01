@@ -94,6 +94,7 @@ analisarControleSemestral <- function(periodo, regiao = NULL, uf = NULL, municip
 
   # Análises ----------------------------------------------------------------
 
+
   analise_cs <-
     cs |> dplyr::left_join(rsisagua::lista_vmp_controle_semestral, by = c(parametro = "chave_parametro")) |>
     dplyr::mutate(resultado_numerico = ifelse(
@@ -104,39 +105,42 @@ analisarControleSemestral <- function(periodo, regiao = NULL, uf = NULL, municip
     )) |>
     dplyr::mutate(
       conformidade =
-        ifelse(
-          ano_de_referencia >= 2021 &
-            resultado_numerico > vmp_novo &
-            is.na(resultado_numerico) == F,
-          F,
-          ifelse(
-            ano_de_referencia < 2021 &
-              resultado_numerico > vmp_ate_2021 &
-              is.na(resultado_numerico) == F,
-            F,
-            ifelse(
-              ano_de_referencia >= 2021 & resultado == "MENOR_LQ" & lq > vmp_novo,
-              NA,
-              ifelse(
-                ano_de_referencia < 2021 &
-                  resultado == "MENOR_LQ" & lq > vmp_ate_2021,
-                NA,
-                ifelse(
-                  ano_de_referencia >= 2021 & resultado == "MENOR_LD" & ld > vmp_novo,
-                  NA,
-                  ifelse(
-                    ano_de_referencia < 2021 &
-                      resultado == "MENOR_LD" &
-                      ld > vmp_ate_2021,
-                    NA,
-                    T
-                  )
-                )
-              )
-            )
-          )
+        dplyr::case_when(
+          (ano_de_referencia >= 2022 & resultado_numerico > vmp_novo & !is.na(resultado_numerico)) ~ FALSE,
+          (ano_de_referencia < 2021 & resultado_numerico > vmp_ate_2021 & !is.na(resultado_numerico)) ~ FALSE,
+          (ano_de_referencia = 2021 & semestre_de_referencia == 1 & resultado_numerico > vmp_ate_2021 & !is.na(resultado_numerico)) ~ FALSE,
+          (ano_de_referencia = 2021 & semestre_de_referencia == 2 & resultado_numerico > vmp_novo & !is.na(resultado_numerico)) ~ FALSE,
+          (ano_de_referencia > 2021 & resultado == "MENOR_LQ" & lq > vmp_novo) ~ NA,
+          (ano_de_referencia = 2021 & semestre_de_referencia == 2 & resultado == "MENOR_LQ" & lq > vmp_novo) ~ NA,
+          (ano_de_referencia = 2021 & semestre_de_referencia == 1 & resultado == "MENOR_LQ" & lq > vmp_ate_2021) ~ NA,
+          (ano_de_referencia < 2021 & resultado == "MENOR_LQ" & lq > vmp_ate_2021) ~ NA,
+          (ano_de_referencia > 2021 & resultado == "MENOR_LD" & ld > vmp_novo) ~ NA,
+          (ano_de_referencia = 2021 & semestre_de_referencia == 2 & resultado == "MENOR_LD" & ld > vmp_novo) ~ NA,
+          (ano_de_referencia = 2021 & semestre_de_referencia == 1 & resultado == "MENOR_LD" & ld > vmp_ate_2021) ~ NA,
+          (ano_de_referencia < 2021 & resultado == "MENOR_LD" & ld > vmp_ate_2021) ~ NA,
+          TRUE ~ TRUE
         )
     )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   #Agrupa por uf, municipio o que mais interessar
 
