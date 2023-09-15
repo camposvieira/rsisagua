@@ -147,7 +147,7 @@ analisarControleSemestral <- function(periodo, regiao = NULL, uf = NULL, municip
   resume_cs <- analise_cs |>
     dplyr::group_by(municipio, uf,
              ano_de_referencia,
-             #semestre_de_referencia,
+             semestre_de_referencia,
              ponto_de_monitoramento,
              grupo_de_parametros,
              parametro.y,
